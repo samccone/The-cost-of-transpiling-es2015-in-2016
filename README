@@ -1,0 +1,18 @@
+An exploration of the landscape of es6 to es3 compilers for web development.
+
+Building Samples
+-------
+
+* babel + browserify
+
+$ make babel
+
+* closure compiler
+
+$make closure //todo
+
+View Demo
+------
+
+$ cd src && python -m SimpleHTTPServer
+* visit localhost:8000/
