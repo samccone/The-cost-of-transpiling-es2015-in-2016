@@ -6,6 +6,14 @@ ES6 => ES5 -- a performance exploration.
 * traceur compiler + uglify
 * closure compiler
 
+
+| Tools              | File Size |
+| -------------------|-----------|
+| typescript         | 20k       |
+| babel + browserify | 20k       |
+| closure            | 16k       |
+
+
 Building Samples
 -------
 
