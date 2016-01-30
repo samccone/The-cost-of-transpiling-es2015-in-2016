@@ -1,18 +1,20 @@
-An exploration of the landscape of es6 to es3 compilers for web development.
+ES6 => ES5 -- a performance exploration.
+
+* babel + browserify + uglify
+* babel + rollup + uglify
+* typescript + uglify
+* traceur compiler + uglify
+* closure compiler
 
 Building Samples
 -------
 
-* babel + browserify
+make <babel | closure | typescript>
 
-$ make babel
-
-* closure compiler
-
-$make closure //todo
 
 View Demo
 ------
 
-$ cd src && python -m SimpleHTTPServer
-* visit localhost:8000/
+cd src && python -m SimpleHTTPServer
+
+visit localhost:8000/
