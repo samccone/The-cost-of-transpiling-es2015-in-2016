@@ -13,10 +13,10 @@
 
 | Tools                        | File Size (bytes) |
 | -----------------------------|-------------------|
-| typescript                   | 19455             |
-| babel + browserify           | 20366             |
 | closure                      | 15213             |
-| babel + rollup               | 15925             |
+| babel + rollup + uglify      | 15925             |
+| typescript + uglify          | 19455             |
+| babel + browserify + uglify  | 20366             |
 | traceur + browserify + uglify| 98117             |
 
 
