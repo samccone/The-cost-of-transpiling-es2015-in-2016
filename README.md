@@ -1,11 +1,15 @@
-ES6 => ES5 -- a performance exploration.
+### ES6 => ES5 -- a performance exploration.
 
-* babel + browserify + uglify
-* babel + rollup + uglify
-* typescript + uglify
-* traceur compiler + uglify
-* closure compiler
+* [x] babel + browserify + uglify
+* [ ] babel + rollup + uglify
+* [x] typescript + uglify
+* [ ] traceur compiler + uglify
+* [x] closure compiler
 
+---------------------------------
+
+
+#### Results
 
 | Tools              | File Size |
 | -------------------|-----------|
@@ -14,15 +18,17 @@ ES6 => ES5 -- a performance exploration.
 | closure            | 16k       |
 
 
-Building Samples
--------
-
-make <babel | closure | typescript>
+--------------------------------
 
 
-View Demo
-------
+#### Contributing
 
-cd src && python -m SimpleHTTPServer
+##### Building Samples
+
+`make \<babel | closure | typescript\>`
+
+##### View Demo
+
+`cd src && python -m SimpleHTTPServer`
 
 visit localhost:8000/
