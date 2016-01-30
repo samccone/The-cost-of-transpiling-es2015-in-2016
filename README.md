@@ -25,7 +25,7 @@
 
 ##### Building Samples
 
-`make \<babel | closure | typescript\>`
+`make <babel | closure | typescript>`
 
 ##### View Demo
 
