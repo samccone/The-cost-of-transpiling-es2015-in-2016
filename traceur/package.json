@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "compile": "npm run traceur && npm run browserify",
+    "traceur": "traceur --modules=commonjs --dir ../src/src/ tmp/",
+    "browserify": "(cat node_modules/traceur/bin/traceur-runtime.js; browserify tmp/app.js;) | ./node_modules/.bin/uglifyjs --compress - > ../src/dist/bundle.js"
+  },
+  "dependencies": {
+    "browserify": "^13.0.0",
+    "traceur": "0.0.102",
+    "uglifyjs": "^2.4.10"
+  }
+}

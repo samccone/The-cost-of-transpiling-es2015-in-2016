@@ -3,7 +3,7 @@
 * [x] babel + browserify + uglify
 * [x] babel + rollup + uglify
 * [x] typescript + uglify
-* [ ] traceur compiler + uglify
+* [x] traceur compiler + uglify
 * [x] closure compiler
 
 ---------------------------------
@@ -11,12 +11,13 @@
 
 #### Results
 
-| Tools              | File Size (bytes) |
-| -------------------|-------------------|
-| typescript         | 19455             |
-| babel + browserify | 20366             |
-| closure            | 15213             |
-| babel + rollup     | 15925             |
+| Tools                        | File Size (bytes) |
+| -----------------------------|-------------------|
+| typescript                   | 19455             |
+| babel + browserify           | 20366             |
+| closure                      | 15213             |
+| babel + rollup               | 15925             |
+| traceur + browserify + uglify| 98117             |
 
 
 --------------------------------
@@ -26,7 +27,7 @@
 
 ##### Building Samples
 
-`make <babel | closure | typescript>`
+`make <babel | closure | typescript | rollup | traceur>`
 
 ##### View Demo
 
