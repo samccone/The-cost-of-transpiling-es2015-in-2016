@@ -1,13 +1,6 @@
-src/node_modules/todomvc-app-css/*
-!src/node_modules/todomvc-app-css/index.css
-
-src/node_modules/todomvc-common/*
-!src/node_modules/todomvc-common/base.css
-
-babel/dist
-babel/node_modules
-
+node_modules
 src/dist
+babel/dist
 
 .DS_Store
 
