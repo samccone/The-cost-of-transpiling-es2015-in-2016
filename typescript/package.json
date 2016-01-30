@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "compile": "tsc --allowJs --module amd --outFile ../src/dist/tmp.js ../src/src/app.js"
+  },
+  "dependencies": {
+    "typescript": "^1.8.0"
+  }
+}
