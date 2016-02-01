@@ -1,14 +1,5 @@
 ### ES6 => ES5 -- a performance exploration.
 
-* [x] babel + browserify + uglify
-* [x] babel + rollup + uglify
-* [x] typescript + uglify
-* [x] traceur compiler + uglify
-* [x] closure compiler
-
----------------------------------
-
-
 #### Results
 
 | Tools                        | File Size (bytes) |
@@ -28,7 +19,7 @@
 
 ##### Building Samples
 
-`make <babel | closure | typescript | rollup | traceur>`
+`make <babel | closure | typescript | rollup | traceur | ...>`
 
 ##### View Demo
 
