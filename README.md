@@ -2,15 +2,15 @@
 
 #### Results
 
-| Tools                        | File Size (bytes) | gzip size (bytes) |
-| -----------------------------|-------------------|-------------------|
-| webpack + babel + uglify     | 13973             | 3737              |
-| closure                      | 15925             | 3824              |
-| rollup-babel-plugin + uglify | 15365             | 4130              |
-| babel + rollup + uglify      | 15926             | 4175              |
-| typescript + uglify          | 19455             | 5379              |
-| babel + browserify + uglify  | 20366             | 4770              |
-| traceur + browserify + uglify| 98117             | 22357             |
+| Tools                        | File Size (bytes) | gzip size (bytes) | js execution time |
+| -----------------------------|-------------------|-------------------|-------------------|
+| webpack + babel + uglify     | 13973             | 3737              | 51.28ms           |
+| closure                      | 15925             | 3824              | 53.15ms           |
+| rollup-babel-plugin + uglify | 15365             | 4130              | 49.50ms           |
+| babel + rollup + uglify      | 15926             | 4175              | 43.96ms           |
+| typescript + uglify          | 19455             | 5379              | 48.49ms           |
+| babel + browserify + uglify  | 20366             | 4770              | 53.37ms           |
+| traceur + browserify + uglify| 98117             | 22357             | 66.60ms           |
 
 --------------------------------
 
@@ -20,6 +20,14 @@
 ##### Building Samples
 
 `make <babel | closure | typescript | rollup | traceur | ...>`
+
+##### Generating sizes
+
+* `make <example-name>`
+* `make size`
+* open demo in chrome... save timeline trace
+* `npm i -g bigrig`
+* `bigrig <path-to-trace> --pp`
 
 ##### View Demo
 
