@@ -1,4 +1,4 @@
-.PHONY: babel typescript closure rollup traceur size
+.PHONY: babel typescript closure rollup traceur size rollup-babel-plugin webpack
 
 all:
 	make typescript
@@ -12,6 +12,8 @@ all:
 	make closure
 	make size
 	make traceur
+	make size
+	make webpack
 	make size
 
 typescript:
@@ -31,6 +33,9 @@ closure:
 
 traceur:
 	cd traceur; npm i; npm run compile
+
+webpack:
+	cd webpack; npm i; npm run compile
 
 size:
 	@echo -----------------------------------------
