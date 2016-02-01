@@ -1,4 +1,4 @@
-### ES6 => ES5 -- a performance exploration.
+### The cost of ES6
 
 With the recent es2015 boom 2016 javascript developers have a myriad of combinatorial choices when it comes to writing es2015 and compiling that code to es5 or lower. From closure compiler to browserify to uglify to webpack it is hard to know what is the best for comping es2015 to run in browsers today.
 
@@ -14,9 +14,8 @@ Each of these tools has a slightly different approach when it comes to dealing w
 
 Ignoring the outlier of traceur, people should heavily consider using a tool that does tree shaking (removal of unused code) and topological sorting of dependencies (ordering the dependencies so that you do not have to worry about import wrapping code). The difference between the final output size between a tool like browserify and rollup can be up to 20%.
 
-![screen shot 2016-02-01 at 3 30 16 pm](https://cloud.githubusercontent.com/assets/883126/12734996/20c69a34-c8f9-11e5-827c-34ffbe177bfa.png)
 
-![screen shot 2016-02-01 at 3 27 48 pm](https://cloud.githubusercontent.com/assets/883126/12734995/204415f0-c8f9-11e5-82f2-eca9c593fc5f.png)
+![screen shot 2016-02-01 at 3 47 10 pm](https://cloud.githubusercontent.com/assets/883126/12735329/d6945160-c8fb-11e5-8556-1687921f7b41.png)
 
 
 
