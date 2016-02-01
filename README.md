@@ -2,15 +2,15 @@
 
 #### Results
 
-| Tools                        | File Size (bytes) |
-| -----------------------------|-------------------|
-| webpack + babel + uglify     | 13972             |
-| closure                      | 15213             |
-| rollup-babel-plugin + uglify | 15365             |
-| babel + rollup + uglify      | 15925             |
-| typescript + uglify          | 19455             |
-| babel + browserify + uglify  | 20366             |
-| traceur + browserify + uglify| 98117             |
+| Tools                        | File Size (bytes) | gzip size (bytes) |
+| -----------------------------|-------------------|-------------------|
+| webpack + babel + uglify     | 13973             | 3737              |
+| closure                      | 15925             | 3824              |
+| rollup-babel-plugin + uglify | 15365             | 4130              |
+| babel + rollup + uglify      | 15926             | 4175              |
+| typescript + uglify          | 19455             | 5379              |
+| babel + browserify + uglify  | 20366             | 4770              |
+| traceur + browserify + uglify| 98117             | 22357             |
 
 --------------------------------
 
