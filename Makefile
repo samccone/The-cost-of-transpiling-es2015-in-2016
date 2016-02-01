@@ -5,6 +5,8 @@ all:
 	make size
 	make babel
 	make size
+	make babelify
+	make size
 	make rollup-babel-plugin
 	make size
 	make rollup
@@ -21,6 +23,9 @@ typescript:
 
 babel:
 	cd babel; npm i; npm run compile
+	
+babelify:
+	cd babelify; npm i; npm run compile
 
 rollup:
 	cd rollup; npm i; npm run compile
