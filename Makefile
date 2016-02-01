@@ -5,6 +5,8 @@ all:
 	make size
 	make babel
 	make size
+	make rollup-babel-plugin
+	make size
 	make rollup
 	make size
 	make closure
@@ -20,6 +22,9 @@ babel:
 
 rollup:
 	cd rollup; npm i; npm run compile
+
+rollup-babel-plugin:
+	cd rollup-babel-plugin; npm i; npm run compile
 
 closure:
 	cd closure; java -jar compiler.jar --language_in=ECMASCRIPT6_STRICT --js_output_file='../src/dist/bundle.js' '../src/src/**.js'
