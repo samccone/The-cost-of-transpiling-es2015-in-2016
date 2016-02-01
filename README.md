@@ -4,8 +4,7 @@
 
 ![screen shot 2016-02-01 at 11 05 17 am](https://cloud.githubusercontent.com/assets/883126/12727905/ff35b1a4-c8d3-11e5-9d1d-85e34b1f837b.png)
 
-
-![image](https://cloud.githubusercontent.com/assets/883126/12728979/469eae42-c8d9-11e5-9429-597d634c90ea.png)
+![image](https://cloud.githubusercontent.com/assets/883126/12729016/76a88b26-c8d9-11e5-86d8-59611623471d.png)
 
 | Tools                        | File Size (bytes) | gzip size (bytes) | js execution time (ms) | tool run time (s)|
 | -----------------------------|-------------------|-------------------|------------------------|------------------|
