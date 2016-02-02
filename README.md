@@ -24,8 +24,11 @@ This post got me thinking about how each of the tools available to developers ha
 Ignoring the outlier of traceur, people should heavily consider using a tool that does tree shaking (removal of unused code) and topological sorting of dependencies (ordering the dependencies so that you do not have to worry about import wrapping code). The difference between the final output size between a tool like browserify and rollup can be up to 20%.
 
 
-![screen shot 2016-02-01 at 3 47 10 pm](https://cloud.githubusercontent.com/assets/883126/12735329/d6945160-c8fb-11e5-8556-1687921f7b41.png)
+![win](https://cloud.githubusercontent.com/assets/883126/12737115/d9445784-c90a-11e5-8e6e-ab38a74a16ee.png)
 
+-------------
+
+##### Raw data
 
 
 | Tools                        | File Size (bytes) | gzip size (bytes) | js execution time (ms) | js compile time (ms) |tool run time (s)|
