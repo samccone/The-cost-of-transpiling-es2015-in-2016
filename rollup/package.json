@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "compile": "./node_modules/.bin/rollup --format iife -- ../src/src/app.js | ./node_modules/.bin/babel --presets ./node_modules/babel-preset-es2015/ | ./node_modules/.bin/uglifyjs --compress - > ../src/dist/bundle.js"
+    "compile": "./node_modules/.bin/rollup --format iife -- ../src/src/app.js | ./node_modules/.bin/babel --presets ./node_modules/babel-preset-es2015/ | ./node_modules/.bin/uglifyjs --compress --mangle - > ../src/dist/bundle.js"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
