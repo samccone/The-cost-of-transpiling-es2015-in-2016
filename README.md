@@ -76,13 +76,13 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 | Tools                        | File Size (bytes) | gzip size (bytes) | js execution time (ms) | js compile time (ms) |tool run time (s)|
 | -----------------------------|-------------------|-------------------|------------------------|----------------------|-----------------|
 | closure                      | 7847              | 2890              | 53.15                  | 9.56                 |7.938            |
+| babel + rollup + uglify      | 11439             | 3456              | 50.81                  | 7.26                 |4.233            |
+| rollup-plugin-babel + uglify | 11466             | 3466              | 49.50                  | 7.85                 |2.754            |
+| typescript + uglify          | 13969             | 4478              | 48.49                  | 8.61                 |2.639            |
 | webpack + babel + uglify     | 13973             | 3737              | 51.28                  | 9.59                 |6.228            |
-| babel + rollup + uglify      | 15213             | 4175              | 50.81                  | 7.26                 |5.496            |
-| rollup-plugin-babel + uglify | 15365             | 4130              | 49.50                  | 7.85                 |2.880            |
-| typescript + uglify          | 19455             | 5379              | 48.49                  | 8.61                 |5.340            |
-| babelify + uglify            | 20366             | 4770              | 43.96                  | 8.25                 |7.37             |
-| babel + browserify + uglify  | 20366             | 4770              | 53.37                  | 8.85                 |6.979            |
-| traceur + browserify + uglify| 98117             | 22357             | 66.60                  | 7.95                 |5.329            |
+| babel + browserify + uglify  | 14328             | 3884              | 53.37                  | 8.85                 |4.947            |
+| babelify + uglify            | 14486             | 3942              | 43.96                  | 8.25                 |3.511            |
+| traceur + browserify + uglify| 69037             | 18166             | 66.60                  | 7.95                 |7.271            |
 
 --------------------------------
 
