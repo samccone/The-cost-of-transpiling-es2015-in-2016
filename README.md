@@ -2,12 +2,12 @@
 
 With the recent es2015 boom 2016 javascript developers have a myriad of combinatorial choices when it comes to writing es2015 and compiling that code to es5 or lower. From closure compiler to browserify to uglify to webpack it is hard to know what is the best for comping es2015 to run in browsers today.
 
-Recently Malte Ubl pointed out a dramatic overall file size savings that the AMP team got when they switched from babel + browserify to closure compiler.
+Recently [Malte Ubl](https://twitter.com/cramforce) pointed out a dramatic overall file size savings that the AMP team got when they switched from babel + browserify to closure compiler.
 
-![screen shot 2016-02-01 at 4 56 07 pm](https://cloud.githubusercontent.com/assets/883126/12736393/bcb03d46-c904-11e5-8d4f-74a0921087bc.png)
+[![screen shot 2016-02-01 at 4 56 07 pm](https://cloud.githubusercontent.com/assets/883126/12736393/bcb03d46-c904-11e5-8d4f-74a0921087bc.png)](https://twitter.com/cramforce/status/690640077865619456)
 
 
-This post got me thinking about how each of the tools available to developers have a slightly different approach when it comes to dealing with import statement and combining multiple files together. The following analysis aims to look at the cost across multiple tools when the goal is to deliver a single JS blob down to the user when writing vanilla non-annotated es2015. 
+Malte's post got me thinking about how each of the tools available to developers have a slightly different approach when it comes to dealing with import statement and combining multiple files together. The following analysis aims to look at the cost across multiple tools when the goal is to deliver a single JS blob down to the user when writing vanilla non-annotated es2015. 
 
 ---------
 
