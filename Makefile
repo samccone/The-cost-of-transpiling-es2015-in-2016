@@ -1,4 +1,4 @@
-.PHONY: babel typescript closure rollup traceur size rollup-babel-plugin webpack babelify
+.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify
 
 all:
 	make typescript
@@ -7,7 +7,7 @@ all:
 	make size
 	make babelify
 	make size
-	make rollup-babel-plugin
+	make rollup-plugin-babel
 	make size
 	make rollup
 	make size
@@ -30,8 +30,8 @@ babelify:
 rollup:
 	cd rollup; npm i; npm run compile
 
-rollup-babel-plugin:
-	cd rollup-babel-plugin; npm i; npm run compile
+rollup-plugin-babel:
+	cd rollup-plugin-babel; npm i; npm run compile
 
 closure:
 	cd closure; java -jar compiler.jar --language_in=ECMASCRIPT6_STRICT --js_output_file='../src/dist/bundle.js' '../src/src/**.js'
