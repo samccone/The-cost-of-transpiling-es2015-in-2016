@@ -7,8 +7,9 @@ There are a lot of tools to compile es2015 to es5. When choosing your compile st
 
 --------------
 
+#### The boom of es2015
 
-With the recent es2015 boom 2016 javascript developers have a myriad of combinatorial choices when it comes to writing es2015 and compiling that code to es5 or lower. From closure compiler to browserify to uglify to webpack it is hard to know what is the best for comping es2015 to run in browsers today.
+With the recent es2015 boom 2016 javascript developers have a myriad of combinatorial choices when it comes to writing es2015 and compiling that code to es5 or lower. From closure compiler to browserify to uglify to webpack it is hard to know what is the best for compiling es2015 to run in browsers today.
 
 Recently [Malte Ubl](https://twitter.com/cramforce) pointed out a dramatic overall file size savings that the AMP team got when they switched from babel + browserify to closure compiler.
 
@@ -17,11 +18,13 @@ Recently [Malte Ubl](https://twitter.com/cramforce) pointed out a dramatic overa
 
 Malte's post got me thinking about how each of the tools available to developers have a slightly different approach when it comes to dealing with import statements and combining multiple files together. The following analysis aims to look at the cost across multiple tools when the goal is to deliver a single JS blob down to the user when writing vanilla non-annotated es2015. 
 
+#### A simple test case:
+
 To start with Let's take a look at this simple bit of code:
 
 ![screen shot 2016-02-01 at 8 58 29 pm](https://cloud.githubusercontent.com/assets/883126/12740282/93547044-c926-11e5-9d0b-16f5bbc48e91.png)
 
-Above is some straight forward Vanilla es2015 -- To run this code in a browser however we first have to convert it to es5 using one of several options. Initially let's try babel + browserify, closure compiler, and rollup, and then compare the output.
+Above is vanilla es2015 code -- To run this code in a browser however we first have to convert it to es5 using one of several options. Initially let's try babel + browserify, closure compiler, and rollup, and then compare the output.
 
 ---------------
 
@@ -37,14 +40,16 @@ Finally looking at **rollup**:
 
 ![screen shot 2016-02-01 at 9 11 59 pm](https://cloud.githubusercontent.com/assets/883126/12740488/788cff5e-c928-11e5-8bf9-8b6bdc2ac372.png)
 
-... rollup simply dead code eliminates everything :)
+> rollup simply dead code eliminates everything :)
 
 
-As you can see, you are paying a fairly high cost per module when using a tool like browserify, as compared to closure or rollup -- This simply put boils down to overhead per module which increases the overall size of your bundle.
+As you can see, you are paying a fairly high cost per module when using a tool like browserify, as compared to closure or rollup -- This simply put, boils down to overhead per module which increases the overall size of your bundle.
 
 ---------
 
-For the next step in our analysis I will be using the vanilla es6 TodoMVC example from here https://github.com/tastejs/todomvc/tree/master/examples/vanilla-es6, (no code was changed help any compiler perform better). For each of the tools that I measured againt, I compiled the source code and then verified that the app was working before taking any measurements. 
+#### A slightly less trivial test:
+
+For the next step in our analysis I will be using the vanilla es6 TodoMVC example from here https://github.com/tastejs/todomvc/tree/master/examples/vanilla-es6, (no code was changed help any compiler perform better). For each of the tools that I measured againt, I compiled the source code, and then verified that the app was working before taking any measurements. 
 
 ##### The overhead and cost for this analysis was measured against the following metrics
 
@@ -58,7 +63,7 @@ For the next step in our analysis I will be using the vanilla es6 TodoMVC exampl
 
 ##### Summary of findings:
 
-Ignoring the outlier of traceur, people should heavily consider using a tool that does tree shaking (removal of unused code) and topological sorting of dependencies (ordering the dependencies so that you do not have to worry about import wrapping code). The difference between the final output size between a tool like browserify and rollup can be up to 20%.
+Ignoring the outlier of traceur, people should heavily consider using a tool that does tree shaking (removal of unused code) and topological sorting of dependencies (ordering the dependencies so that you do not have to worry about import wrapping code). The difference between the final output size between a tool like browserify and rollup can well over 20%, even for a trivial app like TodoMVC.
 
 
 ![win](https://cloud.githubusercontent.com/assets/883126/12737115/d9445784-c90a-11e5-8e6e-ab38a74a16ee.png)
