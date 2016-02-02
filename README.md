@@ -1,5 +1,13 @@
 ### The cost of transpiling ES2015
 
+**tl;dr**
+
+There are a lot of tools to compile es2015 to es5. When choosing your compile stack you should be aware that tools that perform tree shaking and topological sorts of your code dependencies will result in smaller code bundles and faster js execution times.
+
+
+--------------
+
+
 With the recent es2015 boom 2016 javascript developers have a myriad of combinatorial choices when it comes to writing es2015 and compiling that code to es5 or lower. From closure compiler to browserify to uglify to webpack it is hard to know what is the best for comping es2015 to run in browsers today.
 
 Recently [Malte Ubl](https://twitter.com/cramforce) pointed out a dramatic overall file size savings that the AMP team got when they switched from babel + browserify to closure compiler.
@@ -9,11 +17,13 @@ Recently [Malte Ubl](https://twitter.com/cramforce) pointed out a dramatic overa
 
 Malte's post got me thinking about how each of the tools available to developers have a slightly different approach when it comes to dealing with import statements and combining multiple files together. The following analysis aims to look at the cost across multiple tools when the goal is to deliver a single JS blob down to the user when writing vanilla non-annotated es2015. 
 
-Let's take a look at this simple bit of code:
+To start with Let's take a look at this simple bit of code:
 
 ![screen shot 2016-02-01 at 8 58 29 pm](https://cloud.githubusercontent.com/assets/883126/12740282/93547044-c926-11e5-9d0b-16f5bbc48e91.png)
 
-----------
+Above is some straight forward Vanilla es2015 -- To run this code in a browser however we first have to convert it to es5 using one of several options.. Initially let's try babel = browserify, closure compiler, and rollup, and then compare the output.
+
+---------------
 
 Compiling this example with **babel + browserify** results in the following bundle:
 
@@ -29,19 +39,22 @@ Finally looking at **rollup**:
 
 ... rollup simply dead code eliminates everything :)
 
-------------
 
 As you can see, you are paying a fairly high cost per module when using a tool like browserify, as compared to closure or rollup -- This simply put boils down to overhead per module which increases the overall size of your bundle.
 
 ---------
 
-##### The overhead and cost for this analysis is measured against the following metrics
+For the next step in our analysis I will be using the vanilla es6 TodoMVC example from here https://github.com/tastejs/todomvc/tree/master/examples/vanilla-es6, (no code was changed help any compiler perform better). For each of the tools that I measured againt, I compiled the source code and then verified that the app was working before taking any measurements. 
+
+##### The overhead and cost for this analysis was measured against the following metrics
 
 * File bundle size
 * Gzip size
-* js execution time on page load (gathered by [big-rig](https://github.com/GoogleChrome/node-big-rig/))
-* V8 js compile time (gathered by [big-rig](https://github.com/GoogleChrome/node-big-rig/))
 * Tool run time (gathered by `time make <tool>`)
+* *js execution time on page load (gathered by [big-rig](https://github.com/GoogleChrome/node-big-rig/))
+* *js compile time (gathered by [big-rig](https://github.com/GoogleChrome/node-big-rig/))
+
+> As a side note, the numbers that I gathered from the compile time metric and execution time were all within the margin of error of one another. so I will not be using those numbers to draw a hypothesis -- but the results are included at the end of the post.
 
 ##### Summary of findings:
 
@@ -69,7 +82,7 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 --------------------------------
 
 
-#### Contributing
+#### Contributing / Running locally
 
 ##### Building Samples
 
