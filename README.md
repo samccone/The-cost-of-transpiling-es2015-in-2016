@@ -21,7 +21,7 @@ To start with Let's take a look at this simple bit of code:
 
 ![screen shot 2016-02-01 at 8 58 29 pm](https://cloud.githubusercontent.com/assets/883126/12740282/93547044-c926-11e5-9d0b-16f5bbc48e91.png)
 
-Above is some straight forward Vanilla es2015 -- To run this code in a browser however we first have to convert it to es5 using one of several options.. Initially let's try babel = browserify, closure compiler, and rollup, and then compare the output.
+Above is some straight forward Vanilla es2015 -- To run this code in a browser however we first have to convert it to es5 using one of several options. Initially let's try babel + browserify, closure compiler, and rollup, and then compare the output.
 
 ---------------
 
