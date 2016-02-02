@@ -16,7 +16,7 @@ Recently [Malte Ubl](https://twitter.com/cramforce) pointed out a dramatic overa
 [![screen shot 2016-02-01 at 4 56 07 pm](https://cloud.githubusercontent.com/assets/883126/12736393/bcb03d46-c904-11e5-8d4f-74a0921087bc.png)](https://twitter.com/cramforce/status/690640077865619456)
 
 
-Malte's post got me thinking about how each of the tools available to developers have a slightly different approach when it comes to dealing with import statements and combining multiple files together. The following analysis aims to look at the cost across multiple tools when the goal is to deliver a single JS blob down to the user when writing vanilla non-annotated es2015. 
+Malte's post got me thinking about how each of the tools available to developers have a slightly different approach when it comes to dealing with import statements and combining multiple files together. The following analysis aims to look at the cost across multiple tools when the goal is to deliver a single JS blob down to the user when writing vanilla non-annotated es2015.
 
 #### A simple test case:
 
@@ -49,7 +49,7 @@ As you can see, you are paying a fairly high cost per module when using a tool l
 
 #### A slightly less trivial test:
 
-For the next step in our analysis I will be using the vanilla es6 TodoMVC example from here https://github.com/tastejs/todomvc/tree/master/examples/vanilla-es6, (no code was changed to help any compilers perform better). For each of the tools that I measured againt, I compiled the source code, and then verified that the app was working before taking any measurements. 
+For the next step in our analysis I will be using the vanilla es6 TodoMVC example from here https://github.com/tastejs/todomvc/tree/master/examples/vanilla-es6, (no code was changed to help any compilers perform better). For each of the tools that I measured againt, I compiled the source code, and then verified that the app was working before taking any measurements.
 
 ##### The overhead and cost for this analysis was measured against the following metrics
 
@@ -75,6 +75,7 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 
 | Tools                        | File Size (bytes) | gzip size (bytes) | js execution time (ms) | js compile time (ms) |tool run time (s)|
 | -----------------------------|-------------------|-------------------|------------------------|----------------------|-----------------|
+| webpack@2 + babel + uglify   | 13252             | 3572              | 51.28                | ???                 |???
 | webpack + babel + uglify     | 13973             | 3737              | 51.28                  | 9.59                 |6.228            |
 | babel + rollup + uglify      | 15213             | 4175              | 50.81                  | 7.26                 |5.496            |
 | rollup-plugin-babel + uglify | 15365             | 4130              | 49.50                  | 7.85                 |2.880            |
