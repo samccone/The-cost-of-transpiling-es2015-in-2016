@@ -76,6 +76,7 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 | Tools                        | File Size (bytes) | gzip size (bytes) | js execution time (ms) | js compile time (ms) |tool run time (s)|
 | -----------------------------|-------------------|-------------------|------------------------|----------------------|-----------------|
 | closure                      | 7847              | 2890              | 53.15                  | 9.56                 |7.938            |
+| webpack@2 + babel + uglify   | 13252             | 3572              | 51.28                  | ???                  |8.587            |
 | webpack + babel + uglify     | 13973             | 3737              | 51.28                  | 9.59                 |6.228            |
 | babel + rollup + uglify      | 15213             | 4175              | 50.81                  | 7.26                 |5.496            |
 | rollup-plugin-babel + uglify | 15365             | 4130              | 49.50                  | 7.85                 |2.880            |

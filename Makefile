@@ -1,4 +1,4 @@
-.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify
+.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify webpack-2
 
 all:
 	make typescript
@@ -16,6 +16,8 @@ all:
 	make traceur
 	make size
 	make webpack
+	make size
+	make webpack-2
 	make size
 
 typescript:
@@ -42,9 +44,11 @@ traceur:
 webpack:
 	cd webpack; npm i; npm run compile
 
+webpack-2:
+	cd webpack-2; npm i; npm run compile
+
 size:
 	@echo -----------------------------------------
 	stat -f%z src/dist/bundle.js
 	gzip -c src/dist/bundle.js | wc -c
 	@echo -----------------------------------------
-
