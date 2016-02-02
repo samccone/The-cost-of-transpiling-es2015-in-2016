@@ -1,4 +1,4 @@
-### The cost of ES6
+### The cost of transpiling ES2015
 
 With the recent es2015 boom 2016 javascript developers have a myriad of combinatorial choices when it comes to writing es2015 and compiling that code to es5 or lower. From closure compiler to browserify to uglify to webpack it is hard to know what is the best for comping es2015 to run in browsers today.
 
