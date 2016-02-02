@@ -9,6 +9,23 @@ Recently [Malte Ubl](https://twitter.com/cramforce) pointed out a dramatic overa
 
 Malte's post got me thinking about how each of the tools available to developers have a slightly different approach when it comes to dealing with import statements and combining multiple files together. The following analysis aims to look at the cost across multiple tools when the goal is to deliver a single JS blob down to the user when writing vanilla non-annotated es2015. 
 
+Let's take a look at this simple bit of code:
+
+![screen shot 2016-02-01 at 8 58 29 pm](https://cloud.githubusercontent.com/assets/883126/12740282/93547044-c926-11e5-9d0b-16f5bbc48e91.png)
+
+----------
+
+Compiling this example with babel + browserify results in the following bundle:
+
+![screen shot 2016-02-01 at 8 59 23 pm](https://cloud.githubusercontent.com/assets/883126/12740298/b3c6b0da-c926-11e5-85dd-f3a2cdfc9ccb.png)
+
+Now compare that result to using closure compiler
+
+![screen shot 2016-02-01 at 8 57 36 pm](https://cloud.githubusercontent.com/assets/883126/12740268/77bcc3d6-c926-11e5-8d60-2a1dae88c412.png)
+
+
+As you can see, you are paying a fairly high cost when using a tool like browserify vs closure -- this boils down to overhead per module which increases the overall size of your bundle.
+
 ---------
 
 ##### The overhead and cost for this analysis is measured against the following metrics
