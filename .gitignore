@@ -1,5 +1,5 @@
 node_modules
-src/dist
+src/dist/*
 babel/dist
 traceur/tmp
 
