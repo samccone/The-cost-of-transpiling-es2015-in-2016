@@ -15,16 +15,23 @@ Let's take a look at this simple bit of code:
 
 ----------
 
-Compiling this example with babel + browserify results in the following bundle:
+Compiling this example with **babel + browserify** results in the following bundle:
 
 ![screen shot 2016-02-01 at 8 59 23 pm](https://cloud.githubusercontent.com/assets/883126/12740298/b3c6b0da-c926-11e5-85dd-f3a2cdfc9ccb.png)
 
-Now compare that result to using closure compiler
+Now compare that result to using **closure compiler**:
 
 ![screen shot 2016-02-01 at 8 57 36 pm](https://cloud.githubusercontent.com/assets/883126/12740268/77bcc3d6-c926-11e5-8d60-2a1dae88c412.png)
 
+Finally looking at **rollup**:
 
-As you can see, you are paying a fairly high cost when using a tool like browserify vs closure -- this boils down to overhead per module which increases the overall size of your bundle.
+![screen shot 2016-02-01 at 9 11 59 pm](https://cloud.githubusercontent.com/assets/883126/12740488/788cff5e-c928-11e5-8bf9-8b6bdc2ac372.png)
+
+... rollup simply dead code eliminates everything :)
+
+------------
+
+As you can see, you are paying a fairly high cost per module when using a tool like browserify, as compared to closure or rollup -- This simply put boils down to overhead per module which increases the overall size of your bundle.
 
 ---------
 
