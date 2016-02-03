@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "compile": "tsc && webpack ./dist/app.js ../src/dist/app.js -p"
+  },
+  "dependencies": {
+    "typescript": "^1.8.0",
+    "uglifyjs": "^2.4.10",
+    "webpack": "^1.12.12"
+  }
+}

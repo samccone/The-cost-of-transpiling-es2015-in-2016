@@ -82,6 +82,7 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 | webpack + babel + uglify         | 14130             | 3796              | 3307                | 51.28                  | 9.59                 | 6.228             |
 | babel + browserify + uglify      | 14486             | 3942              | 3439                | 53.37                  | 8.85                 | 4.947             |
 | babelify + uglify                | 14486             | 3942              | 3439                | 43.96                  | 8.25                 | 3.511             |
+| typescript + webpack             | 15151             | 4602              | 4048                | 56.57                  | 8.45                 | 14.80             |
 | jspm                             | 15151             | 4602              | 4048                | 55.46                  | 8.05                 | 9.579             |
 | traceur + browserify + uglify    | 69037             | 18166             | 16104               | 66.60                  | 7.95                 | 7.271             |
 

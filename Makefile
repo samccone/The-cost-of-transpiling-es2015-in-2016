@@ -1,4 +1,4 @@
-.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify jspm webpack-2
+.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify jspm webpack-2 typescript-webpack
 
 all:
 	make typescript
@@ -20,6 +20,8 @@ all:
 	make jspm
 	make size
 	make webpack-2
+	make size
+	make typescript-webpack
 	make size
 
 typescript:
@@ -51,6 +53,9 @@ jspm:
 
 webpack-2:
 	cd webpack-2; npm i; npm run compile
+
+typescript-webpack:
+	cd typescript-webpack; npm i; npm run compile
 
 size:
 	@echo -----------------------------------------
