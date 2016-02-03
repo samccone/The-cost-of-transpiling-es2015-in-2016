@@ -56,4 +56,5 @@ size:
 	@echo -----------------------------------------
 	stat -f%z src/dist/bundle.js
 	gzip -c src/dist/bundle.js | wc -c
+	bro --input src/dist/bundle.js | wc -c
 	@echo -----------------------------------------
