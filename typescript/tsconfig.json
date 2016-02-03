@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "module": "commonjs",
+        "outDir": "./dist",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": false
+    },
+    "files": [
+        "../src/src/app.js",
+        "../src/src/controller.js",
+        "../src/src/helpers.js",
+        "../src/src/model.js",
+        "../src/src/store.js",
+        "../src/src/template.js",
+        "../src/src/view.js"
+    ]
+}
