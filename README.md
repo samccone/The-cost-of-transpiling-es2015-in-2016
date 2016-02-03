@@ -65,8 +65,7 @@ For the next step in our analysis I will be using the vanilla es6 TodoMVC exampl
 
 Ignoring the outlier of traceur, people should heavily consider using a tool that does tree shaking (removal of unused code) and topological sorting of dependencies (ordering the dependencies so that you do not have to worry about import wrapping code). The difference between the final output size between a tool like browserify and rollup can well over 20%, even for a trivial app like TodoMVC.
 
-
-![win](https://cloud.githubusercontent.com/assets/883126/12737115/d9445784-c90a-11e5-8e6e-ab38a74a16ee.png)
+![screen shot 2016-02-02 at 9 31 39 pm](https://cloud.githubusercontent.com/assets/883126/12773858/81d51098-c9f4-11e5-82b5-f77d60ac9df7.png)
 
 -------------
 
