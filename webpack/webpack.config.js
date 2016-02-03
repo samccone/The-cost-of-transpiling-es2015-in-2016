@@ -16,6 +16,6 @@ module.exports = {
   },
   resolveLoader: { root: path.join(__dirname, 'node_modules') },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin({ mangle: false })
   ]
 };
