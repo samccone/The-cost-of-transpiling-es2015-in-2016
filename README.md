@@ -49,7 +49,7 @@ As you can see, you are paying a fairly high cost per module when using a tool l
 
 #### A slightly less trivial test:
 
-For the next step in our analysis I will be using the vanilla es6 TodoMVC example from here https://github.com/tastejs/todomvc/tree/master/examples/vanilla-es6, (no code was changed to help any compilers perform better). For each of the tools that I measured againt, I compiled the source code, and then verified that the app was working before taking any measurements. 
+For the next step in our analysis I will be using the vanilla es6 TodoMVC example from here https://github.com/tastejs/todomvc/tree/master/examples/vanilla-es6, (no code was changed to help any compilers perform better). For each of the tools that I measured against, I compiled the source code, and then verified that the app was working before taking any measurements. 
 
 ##### The overhead and cost for this analysis was measured against the following metrics
 
