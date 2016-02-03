@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "compile": "./node_modules/.bin/rollup -c | ./node_modules/.bin/uglifyjs --compress - > ../src/dist/bundle.js"
+    "compile": "./node_modules/.bin/rollup -c | ./node_modules/.bin/uglifyjs --compress --mangle - > ../src/dist/bundle.js"
   },
   "dependencies": {
     "babel-core": "^6.4.5",
