@@ -78,12 +78,12 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 | babel + rollup + uglify      | 11439             | 3456              | 50.81                  | 7.26                 |4.233            |
 | typescript + uglify          | 11442             | 3385              | 48.49                  | 8.61                 |3.166            |
 | rollup-plugin-babel + uglify | 11466             | 3466              | 49.50                  | 7.85                 |2.754            |
+| webpack@2 + babel + uglify   | 13252             | 3572              | 51.28                  | ???                  |8.587            |
 | webpack + babel + uglify     | 13973             | 3737              | 51.28                  | 9.59                 |6.228            |
 | babel + browserify + uglify  | 14328             | 3884              | 53.37                  | 8.85                 |4.947            |
 | babelify + uglify            | 14486             | 3942              | 43.96                  | 8.25                 |3.511            |
 | jspm                         | 15151             | 4602              | 55.46                  | 8.05                 |9.579            |
 | traceur + browserify + uglify| 69037             | 18166             | 66.60                  | 7.95                 |7.271            |
-
 
 --------------------------------
 
