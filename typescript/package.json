@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "compile": "./node_modules/.bin/tsc && (./node_modules/.bin/browserify ./dist/*.js -o ../src/dist/app.js | ./node_modules/.bin/uglifyjs ../src/dist/app.js --compress -o ../src/dist/bundle.js)"
+    "compile": "./node_modules/.bin/tsc && (./node_modules/.bin/browserify ./dist/*.js -o ../src/dist/app.js | ./node_modules/.bin/uglifyjs ../src/dist/app.js --compress --mangle -o ../src/dist/bundle.js)"
   },
   "dependencies": {
     "typescript": "^1.8.0",
