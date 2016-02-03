@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "postinstall": "./node_modules/.bin/jspm install",
+    "compile": "./node_modules/.bin/jspm build src/app.js ../src/dist/bundle.js --minify --skip-source-maps --format global "
+  },
+  "dependencies": {
+    "jspm": "^0.17.0-beta.5"
+  },
+  "jspm": {
+    "name": "app",
+    "dependencies": {},
+    "devDependencies": {
+      "plugin-babel": "npm:systemjs-plugin-babel@^0.0.2"
+    }
+  }
+}
