@@ -1,9 +1,10 @@
 {
   "scripts": {
-    "compile": "(cat almond.js; ./node_modules/.bin/tsc --allowJs --module amd --outFile /dev/stdout ../src/src/app.js; cat bootstrap.js) | ./node_modules/.bin/uglifyjs --compress - > ../src/dist/bundle.js"
+    "compile": "./node_modules/.bin/tsc && (./node_modules/.bin/browserify ./dist/*.js -o ../src/dist/app.js | ./node_modules/.bin/uglifyjs ../src/dist/app.js --compress --mangle -o ../src/dist/bundle.js)"
   },
   "dependencies": {
     "typescript": "^1.8.0",
-    "uglifyjs": "^2.4.10"
+    "uglifyjs": "^2.4.10",
+    "browserify": "^12.0.1"
   }
 }

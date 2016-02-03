@@ -1,6 +1,7 @@
 node_modules
 src/dist/*
 babel/dist
+typescript/dist
 traceur/tmp
 
 .DS_Store
