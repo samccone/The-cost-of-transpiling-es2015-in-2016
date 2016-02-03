@@ -65,7 +65,7 @@ For the next step in our analysis I will be using the vanilla es6 TodoMVC exampl
 
 Ignoring the outlier of traceur, people should heavily consider using a tool that does tree shaking (removal of unused code) and topological sorting of dependencies (ordering the dependencies so that you do not have to worry about import wrapping code). The difference between the final output size between a tool like browserify and rollup can well over 20%, even for a trivial app like TodoMVC.
 
-![screen shot 2016-02-02 at 9 31 39 pm](https://cloud.githubusercontent.com/assets/883126/12773858/81d51098-c9f4-11e5-82b5-f77d60ac9df7.png)
+![screen shot 2016-02-03 at 7 41 17 am](https://cloud.githubusercontent.com/assets/883126/12787273/91036ed4-ca49-11e5-8058-78e7db3d1ec4.png)
 
 -------------
 
@@ -78,7 +78,7 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 | babel + rollup + uglify      | 11439             | 3456              | 50.81                  | 7.26                 |4.233            |
 | typescript + uglify          | 11442             | 3385              | 48.49                  | 8.61                 |3.166            |
 | rollup-plugin-babel + uglify | 11466             | 3466              | 49.50                  | 7.85                 |2.754            |
-| webpack@2 + babel + uglify   | 13252             | 3572              | 51.28                  | ???                  |8.587            |
+| webpack@2 + babel + uglify   | 13252             | 3572              | 51.28                  | 8.35                  |8.587            |
 | webpack + babel + uglify     | 13973             | 3737              | 51.28                  | 9.59                 |6.228            |
 | babel + browserify + uglify  | 14328             | 3884              | 53.37                  | 8.85                 |4.947            |
 | babelify + uglify            | 14486             | 3942              | 43.96                  | 8.25                 |3.511            |
