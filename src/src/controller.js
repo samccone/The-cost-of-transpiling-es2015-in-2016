@@ -187,7 +187,16 @@ export default class Controller {
 		// re-create the todo item elements, calling:
 		//   this.show[All|Active|Completed]()
 		if (force || this._lastActiveRoute !== 'All' || this._lastActiveRoute !== activeRoute) {
-			this['show' + activeRoute]();
+			switch (activeRoute) {
+				case 'All':
+					return this.showAll();
+				case 'Active':
+					return this.showActive();
+				case 'Completed':
+					return this.showCompleted();
+				default:
+					console.warn('unknown ${activeRoute}');
+			}
 		}
 
 		this._lastActiveRoute = activeRoute;

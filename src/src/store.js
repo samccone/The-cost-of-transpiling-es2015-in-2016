@@ -14,7 +14,7 @@ export default class Store {
 
 		if (!localStorage[name]) {
 			const data = {
-				todos: []
+				'todos': []
 			};
 
 			localStorage[name] = JSON.stringify(data);
@@ -39,7 +39,7 @@ export default class Store {
 		 * })
 	 */
 	find(query, callback){
-		const todos = JSON.parse(localStorage[this._dbName]).todos;
+		const todos = JSON.parse(localStorage[this._dbName])['todos'];
 
 		callback.call(this, todos.filter(todo => {
 			for (let q in query) {
@@ -58,7 +58,7 @@ export default class Store {
 	 */
 	findAll(callback){
 		if (callback) {
-			callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
+			callback.call(this, JSON.parse(localStorage[this._dbName])['todos']);
 		}
 	}
 
@@ -72,7 +72,7 @@ export default class Store {
 	 */
 	save(updateData, callback, id){
 		const data = JSON.parse(localStorage[this._dbName]);
-		const todos = data.todos;
+		const todos = data['todos'] || [];
 		const len = todos.length;
 
 		// If an ID was actually given, find the item and update each property
@@ -89,7 +89,7 @@ export default class Store {
 			localStorage[this._dbName] = JSON.stringify(data);
 
 			if (callback) {
-				callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
+				callback.call(this, JSON.parse(localStorage[this._dbName])['todos']);
 			}
 		} else {
 			// Generate an ID
@@ -112,7 +112,7 @@ export default class Store {
 	 */
 	remove(id, callback){
 		const data = JSON.parse(localStorage[this._dbName]);
-		const todos = data.todos;
+		const todos = data['todos'];
 		const len = todos.length;
 
 		for (let i = 0; i < todos.length; i++) {
@@ -125,7 +125,7 @@ export default class Store {
 		localStorage[this._dbName] = JSON.stringify(data);
 
 		if (callback) {
-			callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
+			callback.call(this, JSON.parse(localStorage[this._dbName])['todos']);
 		}
 	}
 
@@ -138,7 +138,7 @@ export default class Store {
 		localStorage[this._dbName] = JSON.stringify({todos: []});
 
 		if (callback) {
-			callback.call(this, JSON.parse(localStorage[this._dbName]).todos);
+			callback.call(this, JSON.parse(localStorage[this._dbName])['todos']);
 		}
 	}
 }
