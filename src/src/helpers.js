@@ -22,7 +22,7 @@ export function $delegate(target, selector, type, handler) {
 	const dispatchEvent = event => {
 		const targetElement = event.target;
 		const potentialElements = qsa(selector, target);
-		const hasMatch = Array.from(potentialElements).includes(targetElement);
+		const hasMatch = Array['from'](potentialElements).includes(targetElement);
 
 		if (hasMatch) {
 			handler.call(targetElement, event);

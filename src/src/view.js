@@ -62,17 +62,17 @@ export default class View {
 		this.$newTodo = qs('.new-todo');
 
 		this.viewCommands = {
-			showEntries: parameter => this.$todoList.innerHTML = this.template.show(parameter),
-			removeItem: parameter => this._removeItem(parameter),
-			updateElementCount: parameter => this.$todoItemCounter.innerHTML = this.template.itemCounter(parameter),
-			clearCompletedButton: parameter => this._clearCompletedButton(parameter.completed, parameter.visible),
-			contentBlockVisibility: parameter => this.$main.style.display = this.$footer.style.display = parameter.visible ? 'block' : 'none',
-			toggleAll: parameter => this.$toggleAll.checked = parameter.checked,
-			setFilter: parameter => _setFilter(parameter),
-			clearNewTodo: parameter => this.$newTodo.value = '',
-			elementComplete: parameter => _elementComplete(parameter.id, parameter.completed),
-			editItem: parameter => _editItem(parameter.id, parameter.title),
-			editItemDone: parameter => this._editItemDone(parameter.id, parameter.title),
+			'showEntries': parameter => this.$todoList.innerHTML = this.template.show(parameter),
+			'removeItem': parameter => this._removeItem(parameter),
+			'updateElementCount': parameter => this.$todoItemCounter.innerHTML = this.template.itemCounter(parameter),
+			'clearCompletedButton': parameter => this._clearCompletedButton(parameter.completed, parameter.visible),
+			'contentBlockVisibility': parameter => this.$main.style.display = this.$footer.style.display = parameter.visible ? 'block' : 'none',
+			'toggleAll': parameter => this.$toggleAll.checked = parameter.checked,
+			'setFilter': parameter => _setFilter(parameter),
+			'clearNewTodo': parameter => this.$newTodo.value = '',
+			'elementComplete': parameter => _elementComplete(parameter.id, parameter.completed),
+			'editItem': parameter => _editItem(parameter.id, parameter.title),
+			'editItemDone': parameter => this._editItemDone(parameter.id, parameter.title),
 		};
 	}
 
