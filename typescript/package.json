@@ -1,10 +1,11 @@
 {
+  "private": true,
   "scripts": {
-    "compile": "./node_modules/.bin/tsc && (./node_modules/.bin/browserify ./dist/*.js -o ../src/dist/app.js | ./node_modules/.bin/uglifyjs ../src/dist/app.js --compress --mangle -o ../src/dist/bundle.js)"
+    "compile": "tsc && browserify ./dist/*.js | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
   },
   "dependencies": {
+    "browserify": "^13.0.0",
     "typescript": "^1.8.0",
-    "uglifyjs": "^2.4.10",
-    "browserify": "^12.0.1"
+    "uglify-js": "^2.6.1"
   }
 }

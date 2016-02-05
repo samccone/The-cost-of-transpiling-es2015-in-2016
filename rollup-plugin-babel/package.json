@@ -1,12 +1,12 @@
 {
+  "private": true,
   "scripts": {
-    "compile": "./node_modules/.bin/rollup -c | ./node_modules/.bin/uglifyjs --compress --mangle - > ../src/dist/bundle.js"
+    "compile": "./node_modules/.bin/rollup -c | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
   },
   "dependencies": {
-    "babel-core": "^6.4.5",
     "babel-preset-es2015-rollup": "^1.1.1",
-    "rollup": "^0.25.1",
+    "rollup": "^0.25.2",
     "rollup-plugin-babel": "^2.3.9",
-    "uglifyjs": "^2.4.10"
+    "uglify-js": "^2.6.1"
   }
 }

@@ -75,16 +75,16 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 | Tools                            | File Size (bytes) | gzip size (bytes) | brotli size (bytes) | js execution time (ms) | js compile time (ms) | tool run time (s) |
 | ---------------------------------|-------------------|-------------------|---------------------|------------------------|----------------------|-------------------|
 | closure                          | 7847              | 2890              | 2529                | 53.15                  | 9.56                 | 7.938             |
-| babel + rollup + uglify          | 11439             | 3456              | 2996                | 50.81                  | 7.26                 | 4.233             |
-| rollup-plugin-babel + uglify     | 11466             | 3466              | 3010                | 49.50                  | 7.85                 | 2.754             |
-| typescript + browserify + uglify | 11600             | 3439              | 3007                | 48.49                  | 8.61                 | 3.166             |
-| webpack@2 + babel + uglify       | 13410             | 3629              | 3148                | 51.28                  | 8.35                 | 8.587             |
+| jspm                             | 11049             | 3393              | 2935                | 55.46                  | 8.05                 | 9.579             |
+| typescript + webpack             | 11128             | 3245              | 2827                | 56.57                  | 8.45                 | 14.80             |
+| babel + rollup + uglify          | 11441             | 3456              | 2997                | 50.81                  | 7.26                 | 4.233             |
+| rollup-plugin-babel + uglify     | 11468             | 3466              | 3014                | 49.50                  | 7.85                 | 2.754             |
+| typescript + browserify + uglify | 11605             | 3436              | 3006                | 48.49                  | 8.61                 | 3.166             |
+| webpack@2 + babel + uglify       | 13346             | 3632              | 3157                | 51.28                  | 8.35                 | 8.587             |
 | webpack + babel + uglify         | 14130             | 3796              | 3307                | 51.28                  | 9.59                 | 6.228             |
-| babel + browserify + uglify      | 14486             | 3942              | 3439                | 53.37                  | 8.85                 | 4.947             |
-| babelify + uglify                | 14486             | 3942              | 3439                | 43.96                  | 8.25                 | 3.511             |
-| typescript + webpack             | 15151             | 4602              | 4048                | 56.57                  | 8.45                 | 14.80             |
-| jspm                             | 15155             | 4605              | 4046                | 55.46                  | 8.05                 | 9.579             |
-| traceur + browserify + uglify    | 69037             | 18166             | 16104               | 66.60                  | 7.95                 | 7.271             |
+| babel + browserify + uglify      | 14596             | 3952              | 3460                | 53.37                  | 8.85                 | 4.947             |
+| babelify + uglify                | 14596             | 3952              | 3460                | 43.96                  | 8.25                 | 3.511             |
+| traceur + browserify + uglify    | 69054             | 18176             | 16106               | 66.60                  | 7.95                 | 7.271             |
 
 --------------------------------
 
