@@ -3,7 +3,6 @@ SystemJS.config({
     "npm:@*/*.json",
     "npm:*.json"
   ],
-  globalEvaluationScope: false,
   transpiler: "plugin-babel",
   sourceMaps: false,
 
