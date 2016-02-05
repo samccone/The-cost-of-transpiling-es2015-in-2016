@@ -397,14 +397,12 @@
       "resolved": "https://registry.npmjs.org/jsonpointer/-/jsonpointer-2.0.0.tgz"
     },
     "jspm": {
-      "version": "0.17.0-beta.5",
-      "from": "jspm@beta",
-      "resolved": "https://registry.npmjs.org/jspm/-/jspm-0.17.0-beta.5.tgz"
+      "version": "0.17.0-beta.6",
+      "from": "jspm@>=0.17.0-beta.6 <0.18.0"
     },
     "jspm-github": {
-      "version": "0.14.2",
-      "from": "jspm-github@>=0.14.2 <0.15.0",
-      "resolved": "https://registry.npmjs.org/jspm-github/-/jspm-github-0.14.2.tgz",
+      "version": "0.14.3",
+      "from": "jspm-github@>=0.14.3 <0.15.0",
       "dependencies": {
         "glob": {
           "version": "4.5.3",
@@ -434,9 +432,8 @@
       }
     },
     "jspm-npm": {
-      "version": "0.27.3",
-      "from": "jspm-npm@>=0.27.3 <0.28.0",
-      "resolved": "https://registry.npmjs.org/jspm-npm/-/jspm-npm-0.27.3.tgz",
+      "version": "0.28.0",
+      "from": "jspm-npm@>=0.28.0 <0.29.0",
       "dependencies": {
         "async": {
           "version": "1.5.2",
@@ -714,9 +711,9 @@
           "resolved": "https://registry.npmjs.org/aws-sign2/-/aws-sign2-0.6.0.tgz"
         },
         "bl": {
-          "version": "1.0.1",
+          "version": "1.0.2",
           "from": "bl@>=1.0.0 <1.1.0",
-          "resolved": "https://registry.npmjs.org/bl/-/bl-1.0.1.tgz"
+          "resolved": "https://registry.npmjs.org/bl/-/bl-1.0.2.tgz"
         },
         "caseless": {
           "version": "0.11.0",
@@ -897,14 +894,13 @@
       "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz"
     },
     "systemjs": {
-      "version": "0.19.18",
-      "from": "systemjs@>=0.19.17 <0.20.0",
-      "resolved": "https://registry.npmjs.org/systemjs/-/systemjs-0.19.18.tgz"
+      "version": "0.19.20",
+      "from": "systemjs@>=0.19.20 <0.20.0"
     },
     "systemjs-builder": {
-      "version": "0.15.6",
-      "from": "systemjs-builder@>=0.15.5 <0.16.0",
-      "resolved": "https://registry.npmjs.org/systemjs-builder/-/systemjs-builder-0.15.6.tgz",
+      "version": "0.15.7",
+      "from": "systemjs-builder@>=0.15.7 <0.16.0",
+      "resolved": "https://registry.npmjs.org/systemjs-builder/-/systemjs-builder-0.15.7.tgz",
       "dependencies": {
         "commander": {
           "version": "2.6.0",
