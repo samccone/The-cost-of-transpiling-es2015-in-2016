@@ -3,6 +3,7 @@ src/dist/*
 babel/dist
 typescript/dist
 traceur/tmp
+jspm/jspm_packages
 
 .DS_Store
 
