@@ -7,6 +7,6 @@
   "dependencies": {
     "browserify": "^13.0.0",
     "traceur": "0.0.102",
-    "uglifyjs": "^2.4.10"
+    "uglify-js": "^2.6.1"
   }
 }
