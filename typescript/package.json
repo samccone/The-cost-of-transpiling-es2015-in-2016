@@ -1,10 +1,11 @@
 {
   "private": true,
   "scripts": {
-    "compile": "tsc && browserify ./dist/*.js | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
+    "compile": "tsc && browserify -p bundle-collapser/plugin ./dist/*.js | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
   },
   "dependencies": {
     "browserify": "^13.0.0",
+    "bundle-collapser": "^1.2.1",
     "typescript": "^1.8.0",
     "uglify-js": "^2.6.1"
   }

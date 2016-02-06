@@ -1,12 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "compile": "babel ../src/src --presets ./node_modules/babel-preset-es2015 --out-dir dist && browserify dist/app.js | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
+    "compile": "babel ../src/src --presets ./node_modules/babel-preset-es2015 --out-dir dist && browserify -p bundle-collapser/plugin dist/app.js | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
     "browserify": "^13.0.0",
+    "bundle-collapser": "^1.2.1",
     "uglify-js": "^2.6.1"
   }
 }
