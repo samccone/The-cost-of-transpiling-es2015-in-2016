@@ -2,9 +2,8 @@ node_modules
 src/dist/*
 babel/dist
 typescript/dist
+typescript-webpack/dist
 traceur/tmp
 jspm/jspm_packages
 
 .DS_Store
-
-

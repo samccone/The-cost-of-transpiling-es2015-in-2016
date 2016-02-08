@@ -61,9 +61,9 @@
       "resolved": "https://registry.npmjs.org/block-stream/-/block-stream-0.0.8.tgz"
     },
     "bluebird": {
-      "version": "3.2.1",
+      "version": "3.2.2",
       "from": "bluebird@>=3.0.5 <4.0.0",
-      "resolved": "https://registry.npmjs.org/bluebird/-/bluebird-3.2.1.tgz"
+      "resolved": "https://registry.npmjs.org/bluebird/-/bluebird-3.2.2.tgz"
     },
     "boom": {
       "version": "2.10.1",
@@ -398,11 +398,13 @@
     },
     "jspm": {
       "version": "0.17.0-beta.6",
-      "from": "jspm@>=0.17.0-beta.6 <0.18.0"
+      "from": "jspm@>=0.17.0-beta.6 <0.18.0",
+      "resolved": "https://registry.npmjs.org/jspm/-/jspm-0.17.0-beta.6.tgz"
     },
     "jspm-github": {
       "version": "0.14.3",
       "from": "jspm-github@>=0.14.3 <0.15.0",
+      "resolved": "https://registry.npmjs.org/jspm-github/-/jspm-github-0.14.3.tgz",
       "dependencies": {
         "glob": {
           "version": "4.5.3",
@@ -434,6 +436,7 @@
     "jspm-npm": {
       "version": "0.28.0",
       "from": "jspm-npm@>=0.28.0 <0.29.0",
+      "resolved": "https://registry.npmjs.org/jspm-npm/-/jspm-npm-0.28.0.tgz",
       "dependencies": {
         "async": {
           "version": "1.5.2",
@@ -895,7 +898,8 @@
     },
     "systemjs": {
       "version": "0.19.20",
-      "from": "systemjs@>=0.19.20 <0.20.0"
+      "from": "systemjs@>=0.19.20 <0.20.0",
+      "resolved": "https://registry.npmjs.org/systemjs/-/systemjs-0.19.20.tgz"
     },
     "systemjs-builder": {
       "version": "0.15.7",
