@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "compile": "babel ../src/src --presets ./node_modules/babel-preset-es2015 --out-dir dist && browserify -p bundle-collapser/plugin dist/app.js | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
+    "compile": "babel ../src/src --presets ./node_modules/babel-preset-es2015 --out-dir dist && browserify -p bundle-collapser/plugin dist/app.js | uglifyjs --compress --mangle --screw-ie8 - > ../src/dist/bundle.js"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
