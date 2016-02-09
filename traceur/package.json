@@ -1,10 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "compile": "npm run traceur && npm run browserify",
-    "traceur": "traceur --modules=commonjs --dir ../src/src/ tmp/",
-    "browserify": "(cat node_modules/traceur/bin/traceur-runtime.js; browserify -p bundle-collapser/plugin tmp/app.js;) | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
-  },
   "dependencies": {
     "browserify": "^13.0.0",
     "bundle-collapser": "^1.2.1",

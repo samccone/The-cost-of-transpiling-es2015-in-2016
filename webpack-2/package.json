@@ -1,8 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "compile": "webpack ../src/src/app.js ../src/dist/bundle.js"
-  },
   "dependencies": {
     "babel-loader": "^6.2.2",
     "babel-preset-es2015-webpack": "^6.3.14",
