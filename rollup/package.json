@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "compile": "rollup --format iife -- ../src/src/app.js | babel --presets ./node_modules/babel-preset-es2015 | uglifyjs --compress --mangle - > ../src/dist/bundle.js"
+    "compile": "rollup --format iife -- ../src/src/app.js | babel --presets ./node_modules/babel-preset-es2015 | uglifyjs --compress --mangle --screw-ie8 - > ../src/dist/bundle.js"
   },
   "dependencies": {
     "babel-cli": "^6.4.5",
