@@ -1,8 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "compile": "rollup -c | uglifyjs --compress --mangle --screw-ie8 - > ../src/dist/bundle.js"
-  },
   "dependencies": {
     "babel-preset-es2015-rollup": "^1.1.1",
     "rollup": "^0.25.2",

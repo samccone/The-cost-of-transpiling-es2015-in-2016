@@ -1,8 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "compile": "tsc && webpack ./dist/app.js ../src/dist/bundle.js -p"
-  },
   "dependencies": {
     "typescript": "^1.8.0",
     "webpack": "^1.12.13"

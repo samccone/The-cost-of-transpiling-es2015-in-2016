@@ -1,8 +1,5 @@
 {
   "private": true,
-  "scripts": {
-    "compile": "browserify ../src/src/app.js -t [ babelify --presets [ ./node_modules/babel-preset-es2015 ] ] -p bundle-collapser/plugin | uglifyjs --compress --mangle --screw-ie8 - > ../src/dist/bundle.js"
-  },
   "dependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
