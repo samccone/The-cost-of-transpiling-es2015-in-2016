@@ -32,7 +32,7 @@ Compiling this example with **babel + browserify** results in the following bund
 
 ![screen shot 2016-02-01 at 8 59 23 pm](https://cloud.githubusercontent.com/assets/883126/12740298/b3c6b0da-c926-11e5-85dd-f3a2cdfc9ccb.png)
 
-Now compare that result to using **closure compiler**:
+Now compare that result to using **closure compiler**: (using no optimization flags)
 
 ![screen shot 2016-02-01 at 8 57 36 pm](https://cloud.githubusercontent.com/assets/883126/12740268/77bcc3d6-c926-11e5-8d60-2a1dae88c412.png)
 
