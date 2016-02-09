@@ -32,7 +32,7 @@ Compiling this example with **babel + browserify** results in the following bund
 
 ![screen shot 2016-02-01 at 8 59 23 pm](https://cloud.githubusercontent.com/assets/883126/12740298/b3c6b0da-c926-11e5-85dd-f3a2cdfc9ccb.png)
 
-Now compare that result to using **closure compiler**:
+Now compare that result to using **closure compiler**: (using no optimization flags)
 
 ![screen shot 2016-02-01 at 8 57 36 pm](https://cloud.githubusercontent.com/assets/883126/12740268/77bcc3d6-c926-11e5-8d60-2a1dae88c412.png)
 
@@ -65,7 +65,7 @@ For the next step in our analysis I will be using the vanilla es6 TodoMVC exampl
 
 Ignoring the outlier of traceur, people should heavily consider using a tool that does tree shaking (removal of unused code) and topological sorting of dependencies (ordering the dependencies so that you do not have to worry about import wrapping code). The difference between the final output size between a tool like browserify and rollup can well over 20%, even for a trivial app like TodoMVC.
 
-![screen shot 2016-02-08 at 10 36 55 am](https://cloud.githubusercontent.com/assets/883126/12895179/ebb05536-ce4f-11e5-88f6-75ecfe7708d4.png)
+![image](https://cloud.githubusercontent.com/assets/883126/12903661/453405a2-ce7e-11e5-9ddf-389f4ef8f60f.png)
 
 -------------
 
@@ -77,14 +77,14 @@ Ignoring the outlier of traceur, people should heavily consider using a tool tha
 | closure                               | 7847              | 2890              | 2529                | 53.15                  | 9.56                 | 7.938             |
 | jspm@0.17 (babel + rollup + uglify)   | 11049             | 3393              | 2935                | 55.46                  | 8.05                 | 2.978             |
 | typescript + webpack                  | 11128             | 3245              | 2827                | 56.57                  | 8.45                 | 4.636             |
-| babel + rollup + uglify               | 11441             | 3456              | 2997                | 50.81                  | 7.26                 | 2.396             |
-| rollup-plugin-babel + uglify          | 11468             | 3466              | 3014                | 49.50                  | 7.85                 | 2.806             |
-| typescript + browserify + uglify      | 11472             | 3418              | 2981                | 48.49                  | 8.61                 | 2.724             |
+| babel + rollup + uglify               | 11423             | 3440              | 2989                | 50.81                  | 7.26                 | 2.396             |
+| typescript + browserify + uglify      | 11442             | 3415              | 2976                | 48.49                  | 8.61                 | 2.724             |
+| rollup-plugin-babel + uglify          | 11444             | 3447              | 2997                | 49.50                  | 7.85                 | 2.806             |
 | webpack@2 + babel + uglify            | 13346             | 3632              | 3157                | 51.28                  | 8.35                 | 2.007             |
 | webpack + babel + uglify              | 14130             | 3796              | 3307                | 51.28                  | 9.59                 | 2.045             |
-| babel + browserify + uglify           | 14462             | 3931              | 3433                | 53.37                  | 8.85                 | 4.947             |
-| babelify + uglify                     | 14462             | 3931              | 3433                | 43.96                  | 8.25                 | 3.697             |
-| traceur + browserify + uglify         | 68920             | 18162             | 16078               | 66.60                  | 7.95                 | 3.085             |
+| babel + browserify + uglify           | 14409             | 3915              | 3422                | 53.37                  | 8.85                 | 4.947             |
+| babelify + uglify                     | 14409             | 3915              | 3422                | 43.96                  | 8.25                 | 3.697             |
+| traceur + browserify + uglify         | 68699             | 18000             | 15945               | 66.60                  | 7.95                 | 3.085             |
 
 -------------------------------------
 

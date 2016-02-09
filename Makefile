@@ -36,30 +36,30 @@ all:
 
 typescript:
 	cd typescript; npm i;
-	cd typescript; time $(tsc) && $(browserify) -p bundle-collapser/plugin ./dist/*.js | $(uglifyjs) --compress --mangle - > ../src/dist/bundle.js
+	cd typescript; time $(tsc) && $(browserify) -p bundle-collapser/plugin ./dist/*.js | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
 
 babel:
 	cd babel; npm i;
-	cd babel; time $(babel) ../src/src --presets ./node_modules/babel-preset-es2015 --out-dir dist && $(browserify) -p bundle-collapser/plugin dist/app.js | $(uglifyjs) --compress --mangle - > ../src/dist/bundle.js
+	cd babel; time $(babel) ../src/src --presets ./node_modules/babel-preset-es2015 --out-dir dist && $(browserify) -p bundle-collapser/plugin dist/app.js | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
 
 babelify:
 	cd babelify; npm i;
-	cd babelify; time $(browserify) ../src/src/app.js -t [ babelify --presets [ ./node_modules/babel-preset-es2015 ] ] -p bundle-collapser/plugin | $(uglifyjs) --compress --mangle - > ../src/dist/bundle.js
+	cd babelify; time $(browserify) ../src/src/app.js -t [ babelify --presets [ ./node_modules/babel-preset-es2015 ] ] -p bundle-collapser/plugin | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
 
 rollup:
 	cd rollup; npm i;
-	cd rollup; time $(rollup) --format iife -- ../src/src/app.js | $(babel) --presets ./node_modules/babel-preset-es2015 | $(uglifyjs) --compress --mangle - > ../src/dist/bundle.js
+	cd rollup; time $(rollup) --format iife -- ../src/src/app.js | $(babel) --presets ./node_modules/babel-preset-es2015 | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
 
 rollup-plugin-babel:
 	cd rollup-plugin-babel; npm i;
-	cd rollup-plugin-babel; time $(rollup) -c | $(uglifyjs) --compress --mangle - > ../src/dist/bundle.js
+	cd rollup-plugin-babel; time $(rollup) -c | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
 
 closure:
 	cd closure; time java -jar compiler.jar --compilation_level ADVANCED_OPTIMIZATIONS --language_in=ECMASCRIPT6_STRICT --js_output_file='../src/dist/bundle.js' '../src/src/**.js'
 
 traceur:
 	cd traceur; npm i;
-	cd traceur; time $(traceur) --modules=commonjs --dir ../src/src/ tmp/ && (cat node_modules/traceur/bin/traceur-runtime.js; $(browserify) -p bundle-collapser/plugin tmp/app.js;) | $(uglifyjs) --compress --mangle - > ../src/dist/bundle.js
+	cd traceur; time $(traceur) --modules=commonjs --dir ../src/src/ tmp/ && (cat node_modules/traceur/bin/traceur-runtime.js; $(browserify) -p bundle-collapser/plugin tmp/app.js;) | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
 
 webpack:
 	cd webpack; npm i;
