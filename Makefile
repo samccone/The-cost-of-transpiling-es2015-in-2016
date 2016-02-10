@@ -1,4 +1,4 @@
-.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify jspm webpack-2 typescript-webpack
+.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify jspm webpack-2 typescript-webpack brotli
 
 # local binary paths
 browserify = node ./node_modules/browserify/bin/cmd.js
@@ -9,6 +9,7 @@ tsc = node node_modules/typescript/bin/tsc
 rollup = node node_modules/rollup/bin/rollup
 jspm = node node_modules/jspm/jspm.js
 webpack = node node_modules/webpack/bin/webpack.js
+bro = brotli-0.3.0/tools/bro
 
 all:
 	make typescript
@@ -77,9 +78,14 @@ typescript-webpack:
 	cd typescript-webpack; npm i;
 	cd typescript-webpack; time $(tsc) && $(webpack) ./dist/app.js ../src/dist/bundle.js -p
 
+brotli:
+	wget https://github.com/google/brotli/archive/v0.3.0.tar.gz
+	tar -xf v0.3.0.tar.gz
+	make -C brotli-0.3.0/tools/
+
 size:
 	@echo -----------------------------------------
 	cat src/dist/bundle.js | wc -c
 	gzip -c src/dist/bundle.js | wc -c
-	bro --input src/dist/bundle.js | wc -c
+	$(bro) --input src/dist/bundle.js | wc -c
 	@echo -----------------------------------------
