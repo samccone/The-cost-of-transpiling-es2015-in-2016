@@ -1,4 +1,4 @@
-.PHONY: babel typescript closure rollup traceur size rollup-plugin-babel webpack babelify jspm webpack-2 typescript-webpack brotli
+.PHONY: babel typescript closure rollup rollupify traceur size rollup-plugin-babel webpack babelify jspm webpack-2 typescript-webpack brotli
 
 # local binary paths
 browserify = node ./node_modules/browserify/bin/cmd.js
@@ -7,6 +7,7 @@ babel = node ./node_modules/babel-cli/bin/babel.js
 traceur = node node_modules/traceur/bin/traceur.js
 tsc = node node_modules/typescript/bin/tsc
 rollup = node node_modules/rollup/bin/rollup
+rollupify = node node_modules/rollupify/bin/rollupify
 jspm = node node_modules/jspm/jspm.js
 webpack = node node_modules/webpack/bin/webpack.js
 bro = brotli-0.3.0/tools/bro
@@ -21,6 +22,8 @@ all:
 	make rollup-plugin-babel
 	make size
 	make rollup
+	make size
+	make rollupify
 	make size
 	make closure
 	make size
@@ -50,6 +53,10 @@ babelify:
 rollup:
 	cd rollup; npm i;
 	cd rollup; time $(rollup) --format iife -- ../src/src/app.js | $(babel) --presets ./node_modules/babel-preset-es2015 | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
+
+rollupify:
+	cd rollupify; npm i;
+	cd rollupify; time $(browserify) ../src/src/app.js -t rollupify -t [ babelify --presets ./node_modules/babel-preset-es2015 ] -p bundle-collapser/plugin | $(uglifyjs) --compress --mangle --screw-ie8 - > ../src/dist/bundle.js
 
 rollup-plugin-babel:
 	cd rollup-plugin-babel; npm i;
